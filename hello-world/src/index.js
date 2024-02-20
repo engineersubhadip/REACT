@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import BasicDetails from './Components/BasicDetails';
-import Experience from './Components/Experience';
+import {Experience,dummyText} from './Components/Experience';
 
 
 
@@ -17,6 +17,7 @@ root.render(
   <div>
     <BasicDetails/>
     <Experience/>
+    <h2>{dummyText}</h2>
   </div>
 
 );

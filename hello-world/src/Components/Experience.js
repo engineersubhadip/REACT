@@ -1,4 +1,4 @@
-const Experience = function(){
+export const Experience = function(){
     return(
       <div>
       <h2>Companies Name</h2>
@@ -12,4 +12,4 @@ const Experience = function(){
     )
   }
 
-export default Experience;
+export let dummyText = "Sample Dummy Text"
