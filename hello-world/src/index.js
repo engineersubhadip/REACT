@@ -3,30 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-const Experience = function(){
-  return(
-    <div>
-    <h2>Companies Name</h2>
-    <ul>
-      <li>Microsoft</li>
-      <li>PhonePe</li>
-      <li>MoEngage</li>
-      <li>Lime Chat</li>
-    </ul>
-    </div>
-  )
-}
+import BasicDetails from './Components/BasicDetails';
+import Experience from './Components/Experience';
 
 
-const BasicDetails = function(){
-  return(
-    <div>
-      <h2>Chirag Goel</h2>
-      <h3>Engineer | Teacher | Open Source Contributor</h3>
-    </div>
-  )
-}
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
