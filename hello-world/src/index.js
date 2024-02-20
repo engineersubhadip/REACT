@@ -4,29 +4,39 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// const Experience = function(){
-//   return (
-//     <div>
-//       <h2>My Experience</h2>
-//       <ul>
-//         <li>Accenture</li>
-//         <li>Teaching Assistant</li>
-//       </ul>
-//     </div>
-//   )
-// }
+const Experience = function(){
+  return(
+    <div>
+    <h2>Companies Name</h2>
+    <ul>
+      <li>Microsoft</li>
+      <li>PhonePe</li>
+      <li>MoEngage</li>
+      <li>Lime Chat</li>
+    </ul>
+    </div>
+  )
+}
 
+
+const BasicDetails = function(){
+  return(
+    <div>
+      <h2>Chirag Goel</h2>
+      <h3>Engineer | Teacher | Open Source Contributor</h3>
+    </div>
+  )
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+  <div>
+    <BasicDetails/>
+    <Experience/>
+  </div>
 
-  // <div>
-  //   <h1>Hello React World</h1>
-  //   <Experience/>
-    
-  // </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
