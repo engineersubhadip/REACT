@@ -1,0 +1,20 @@
+.counter-wrapper{
+    padding:20px;
+    margin:20px;
+    border:1px solid black;
+}
+
+.red-theme{
+    background-color:red;
+    color:white;
+}
+
+.blue-theme{
+    background-color:blue;
+    color:white;
+}
+
+.green-theme{
+    background-color:green;
+    color:white;
+}
