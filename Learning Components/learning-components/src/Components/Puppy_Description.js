@@ -1,7 +1,7 @@
-let Puppy_Description = function(){
+let Puppy_Description = function(props){
     return (
         <div>
-            This is a cute puppy
+            {props.description}
         </div>
     )
 }

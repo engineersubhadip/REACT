@@ -1,12 +1,17 @@
 import './../Styles/Puppy.css'
 import Puppy_Description from './Puppy_Description';
 
-let Puppy = function(){
+let Puppy = function(props){
+    let text = props.text;
+    let imageURL = props.imageSrc;
+    let customStyle = {color:"red",fontSize:"1.5rem"};
+
     return(
         <div className="first">
-            <h3>Welcome to Puppy 1</h3>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0-dDhLNGEsRpj4Kwnd-5wgOPsz56F6hykFg&usqp=CAU"></img>
-            <Puppy_Description/>
+            <h3 style={customStyle}>Welcome to {text}</h3>
+            <img src={imageURL} alt="#"></img>
+            <Puppy_Description description={props.description}/>
+            
         </div>
     )
 }
