@@ -1,3 +1,4 @@
+
 .todo-wrapper{
     width:350px;
     background-color: #FFE3CC;
@@ -5,6 +6,13 @@
     flex-direction: column;
     border-radius:5px;
     padding: 15px;
+    border:2px solid #8F797E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: box-shadow 0.3s ease; /* Add transition effect */
+}
+
+.todo-wrapper:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change shadow on hover */
 }
 
 .todo-form form{
@@ -53,7 +61,7 @@
 .incoming-todo-item .delete-edit{
     width:15%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .incoming-todo-item .delete-edit i:hover{
