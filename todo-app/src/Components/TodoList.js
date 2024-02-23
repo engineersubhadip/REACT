@@ -64,6 +64,7 @@ let TodoList = function () {
     let indexToDelete = e.target.dataset.id;
     
     // Making a copy of the existing Todo Record to avoid Mutation:-
+    
     let copiedTodo = [...todo];
 
     copiedTodo.splice(indexToDelete,1); // Deleted the Record from the Todo List
@@ -72,6 +73,16 @@ let TodoList = function () {
 
     setTodos(copiedTodo);
   }
+
+//   let editRecord = function(e){
+//     let indexToEdit = e.target.dataset.id;
+
+//     // Making a copy of the existing Record to avoid Mutation:-
+
+//     let copiedTodo = [...todo];
+
+//     // Capturing and copying the object to edit:-
+//   }
 
   return (
     <div className="parent-wrapper">
@@ -102,7 +113,7 @@ let TodoList = function () {
                 <input type="checkbox" checked={ele.isCompleted} data-id={idx} onChange={handleCompletion} />
                 <span className={ele.isCompleted ? "task-complete":""}>{ele.title}</span>
                 </div>
-                <div className="delete-btn">
+                <div className="delete-edit">
                 <i class="fa-solid fa-trash" data-id={idx} onClick={deleteRecord}></i>
                 </div>
               </p>

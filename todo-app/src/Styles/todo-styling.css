@@ -50,6 +50,12 @@
     text-decoration: line-through;
 }
 
-.incoming-todo-item .delete-btn i:hover{
+.incoming-todo-item .delete-edit{
+    width:15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.incoming-todo-item .delete-edit i:hover{
     cursor: pointer;
 }
