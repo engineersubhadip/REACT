@@ -74,15 +74,6 @@ let TodoList = function () {
     setTodos(copiedTodo);
   }
 
-//   let editRecord = function(e){
-//     let indexToEdit = e.target.dataset.id;
-
-//     // Making a copy of the existing Record to avoid Mutation:-
-
-//     let copiedTodo = [...todo];
-
-//     // Capturing and copying the object to edit:-
-//   }
 
   return (
     <div className="parent-wrapper">
