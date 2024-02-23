@@ -5,11 +5,11 @@ let TodoList = function () {
 
   let [todo, setTodos] = useState(
     [
-    { title: "Item1", isCompleted: true },
-    { title: "Item2", isCompleted: false },
-    { title: "Item3", isCompleted: true },
-    { title: "Item4", isCompleted: false },
-    { title: "Item5", isCompleted: true },
+    // { title: "Item1", isCompleted: true },
+    // { title: "Item2", isCompleted: false },
+    // { title: "Item3", isCompleted: true },
+    // { title: "Item4", isCompleted: false },
+    // { title: "Item5", isCompleted: true },
   ]
   );
 
@@ -79,8 +79,8 @@ let TodoList = function () {
           </form>
         </div>
         <div className="todo-list-wrapper">
-
-          {todo.map(function (ele,idx) {
+        {!todo.length ? <p className="default-todo">Please enter a todo</p> : ""} 
+          {todo.map(function (ele,idx) { 
             return (
               <p>
                 <input type="checkbox" checked={ele.isCompleted} data-id={idx} onChange={handleCompletion} />
@@ -88,6 +88,7 @@ let TodoList = function () {
               </p>
             );
           })}
+
         </div>
       </div>
     </div>

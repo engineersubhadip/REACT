@@ -33,7 +33,6 @@
     padding:10px;
     border-bottom: none;
 } */
-
 .todo-list-wrapper p{
     padding-bottom:10px;
     border-bottom: 1px solid yellowgreen;
@@ -44,6 +43,13 @@
     border-bottom: none;
 }
 
+.default-todo{
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+}
+
 .task-complete{
     text-decoration: line-through;
+    
 }
