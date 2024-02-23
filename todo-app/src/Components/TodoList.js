@@ -2,13 +2,6 @@ import "./../Styles/todo-styling.css";
 import { useState } from "react";
 
 let TodoList = function () {
-  // let data = ["Item1","Item2","Item3","Item4"];
-  // let data = [
-  //     {title:"Item1"},
-  //     {title:"Item2"},
-  //     {title:"Item3"},
-  //     {title:"Item4"}
-  // ]
 
   let [todo, setTodos] = useState(
     [
@@ -29,9 +22,7 @@ let TodoList = function () {
   let handleTodoSubmit = function (e) {
     // Upon Clicking on the AddNewTodo Button we will add the new todo the todo list
     e.preventDefault(); // To stop the page from reloading
-    console.log(newTodo); // User has currently typed the word
     let newTodoList = [...todo, { title: newTodo,isCompleted: dropDownValue}];
-    console.log(dropDownValue);
     setTodos(newTodoList);
     setNewTodo(""); // The value just entered inside the I/P will be initialized to "" inside SV.
     setDropDownvalue(false); // Resetting the Drop Down SV
