@@ -7,21 +7,21 @@
     padding: 15px;
 }
 
-.top-half{
+.todo-form{
     display: flex;
     justify-content: space-between;
 }
 
-.top-half input{
+.todo-form input{
     background-color: #DCC3A1;
 }
 
-.top-half button{
+.todo-form button{
     background-color:#8F797E;
     color:white;
     border-radius: 5px;
 }
-.top-half button:hover{
+.todo-form button:hover{
     cursor: pointer;
 }
 /* .todo-item{
