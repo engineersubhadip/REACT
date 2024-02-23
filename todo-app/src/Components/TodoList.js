@@ -28,7 +28,8 @@ let TodoList = function () {
     // Upon Clicking on the AddNewTodo Button we will add the new todo the todo list
     e.preventDefault(); // To stop the page from reloading
     console.log(newTodo); // User has currently typed the word
-    let newTodoList = [...todo, { title: newTodo }];
+    let newTodoList = [...todo, { title: newTodo,isCompleted: dropDownValue}];
+    console.log(dropDownValue);
     setTodos(newTodoList);
     setNewTodo(""); // The value just entered inside the I/P will be initialized to "" inside SV.
   };
@@ -53,6 +54,16 @@ let TodoList = function () {
     setTodos(newTodoList);
   }
 
+  let [dropDownValue,setDropDownvalue] = useState(false);
+
+  let handleDropDown = function(e){
+    if(e.target.value === "Pending"){
+        setDropDownvalue(false);
+    }else{
+        setDropDownvalue(true);
+    }
+  }
+
   return (
     <div className="parent-wrapper">
       <h3>Todo Application</h3>
@@ -65,9 +76,9 @@ let TodoList = function () {
               placeholder="Please enter a todo"
               onChange={handleNewTodoChange}
             ></input>
-            <select>
-              <option>Complete</option>
-              <option>Pending</option>
+            <select onChange={handleDropDown}>
+              <option value="Pending">Pending</option>
+              <option value="Complete">Complete</option>
             </select>
             <button onClick={handleTodoSubmit}>Add Todo</button>
           </form>
