@@ -3,12 +3,20 @@ import { useState } from "react";
 
 let TodoList = function(){
     // let data = ["Item1","Item2","Item3","Item4"];
-    let data = [
+    // let data = [
+    //     {title:"Item1"},
+    //     {title:"Item2"},
+    //     {title:"Item3"},
+    //     {title:"Item4"}
+    // ]
+
+    let [todo,setTodos] = useState([
         {title:"Item1"},
         {title:"Item2"},
         {title:"Item3"},
-        {title:"Item4"}
-    ]
+        {title:"Item4"},
+        {title:"Item5"}
+    ])
     return(
         <div className="parent-wrapper">
             {/* <h2>Todo Application</h2> */}
@@ -22,7 +30,7 @@ let TodoList = function(){
                 <button>Add Todo</button>
             </div>
             <div className="todo-list-wrapper">
-                {data.map(function(ele){
+                {todo.map(function(ele){
                     return(<p>{ele.title}</p>);
                 })}
             </div>
