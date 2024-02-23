@@ -10,13 +10,15 @@ let TodoList = function () {
   //     {title:"Item4"}
   // ]
 
-  let [todo, setTodos] = useState([
+  let [todo, setTodos] = useState(
+    [
     { title: "Item1", isCompleted: true },
     { title: "Item2", isCompleted: false },
     { title: "Item3", isCompleted: true },
     { title: "Item4", isCompleted: false },
     { title: "Item5", isCompleted: true },
-  ]);
+  ]
+  );
 
   let [newTodo, setNewTodo] = useState("");
 
@@ -32,6 +34,7 @@ let TodoList = function () {
     console.log(dropDownValue);
     setTodos(newTodoList);
     setNewTodo(""); // The value just entered inside the I/P will be initialized to "" inside SV.
+    setDropDownvalue(false); // Resetting the Drop Down SV
   };
 
   let handleCompletion = function(e){
@@ -84,6 +87,7 @@ let TodoList = function () {
           </form>
         </div>
         <div className="todo-list-wrapper">
+
           {todo.map(function (ele,idx) {
             return (
               <p>
