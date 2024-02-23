@@ -7,7 +7,7 @@
     padding: 15px;
 }
 
-.todo-form{
+.todo-form form{
     display: flex;
     justify-content: space-between;
 }
@@ -42,4 +42,8 @@
 .todo-list-wrapper p:last-child{
     padding-bottom: 0;
     border-bottom: none;
+}
+
+.task-complete{
+    text-decoration: line-through;
 }
