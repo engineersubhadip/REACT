@@ -24,15 +24,7 @@
 .todo-form button:hover{
     cursor: pointer;
 }
-/* .todo-item{
-    padding:10px;
-    border-bottom: 1px solid yellowgreen;
-}
 
-.todo-item:last-child{
-    padding:10px;
-    border-bottom: none;
-} */
 .todo-list-wrapper p{
     padding-bottom:10px;
     border-bottom: 1px solid yellowgreen;
@@ -49,7 +41,15 @@
     font-size: large;
 }
 
+.incoming-todo-item{
+    display: flex;
+    justify-content: space-between;
+}
+
 .task-complete{
     text-decoration: line-through;
-    
+}
+
+.incoming-todo-item .delete-btn i:hover{
+    cursor: pointer;
 }

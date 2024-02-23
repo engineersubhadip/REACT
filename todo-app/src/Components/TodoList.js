@@ -1,6 +1,7 @@
 import "./../Styles/todo-styling.css";
 import { useState } from "react";
 
+
 let TodoList = function () {
 
   let [todo, setTodos] = useState(
@@ -23,7 +24,6 @@ let TodoList = function () {
     // Upon Clicking on the AddNewTodo Button we will add the new todo the todo list
     e.preventDefault(); // To stop the page from reloading
     let newTodoList = [...todo, { title: newTodo, isCompleted: dropDownValue}];
-    console.log(dropDownValue);
     setTodos(newTodoList);
     setNewTodo(""); // The value just entered inside the I/P will be initialized to "" inside SV.
     setDropDownvalue(false); // Resetting the Drop Down SV
@@ -59,9 +59,24 @@ let TodoList = function () {
     }
   }
 
+  let deleteRecord = function(e){
+    
+    let indexToDelete = e.target.dataset.id;
+    
+    // Making a copy of the existing Todo Record to avoid Mutation:-
+    let copiedTodo = [...todo];
+
+    copiedTodo.splice(indexToDelete,1); // Deleted the Record from the Todo List
+
+    // Now we will have to update the State Variable of todo
+
+    setTodos(copiedTodo);
+  }
+
   return (
     <div className="parent-wrapper">
       <h3>Todo Application</h3>
+      
       <div className="todo-wrapper">
         <div className="todo-form">
           <form>
@@ -82,9 +97,14 @@ let TodoList = function () {
         {!todo.length ? <p className="default-todo">Please enter a todo</p> : ""} 
           {todo.map(function (ele,idx) { 
             return (
-              <p>
+              <p className="incoming-todo-item">
+                <div>
                 <input type="checkbox" checked={ele.isCompleted} data-id={idx} onChange={handleCompletion} />
                 <span className={ele.isCompleted ? "task-complete":""}>{ele.title}</span>
+                </div>
+                <div className="delete-btn">
+                <i class="fa-solid fa-trash" data-id={idx} onClick={deleteRecord}></i>
+                </div>
               </p>
             );
           })}
