@@ -74,11 +74,24 @@ let TodoList = function () {
     setTodos(copiedTodo);
   }
 
+  let editRecord = function(e){
+	let indexToEdit = e.target.dataset.id;
+	console.log(indexToEdit);
+	
+  }
 
   return (
     <div className="parent-wrapper">
       <h3>Todo Application</h3>
-      
+
+      <div className="edit-todo-wrapper">
+		<input placeholder="Please enter the updated todo"></input>
+		<div className="edit-todo-button">
+		<button>Cancel</button>
+		<button>Save</button>
+		</div>
+	  </div>
+
       <div className="todo-wrapper">
         <div className="todo-form">
           <form>
@@ -106,6 +119,7 @@ let TodoList = function () {
                 </div>
                 <div className="delete-edit">
                 <i class="fa-solid fa-trash" data-id={idx} onClick={deleteRecord}></i>
+				<i class="fa-solid fa-pen-to-square" data-id={idx} onClick={editRecord}></i>
                 </div>
               </p>
             );

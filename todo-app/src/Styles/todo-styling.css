@@ -1,3 +1,33 @@
+.edit-todo-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE3CC;
+    border:2px solid #8F797E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius:5px;
+    padding: 15px;
+    position: fixed;
+    z-index: 2;
+    width:350px;
+    display: none;
+}
+
+.edit-todo-wrapper input{
+    height:1.5rem;
+    margin-bottom: 1rem;
+    background-color: #DCC3A1;
+}
+
+.edit-todo-button{
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-todo-button button{
+    background-color:#8F797E;
+    color:white;
+    border-radius: 5px;
+}
 
 .todo-wrapper{
     width:350px;
@@ -9,6 +39,8 @@
     border:2px solid #8F797E;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
     transition: box-shadow 0.3s ease; /* Add transition effect */
+    position: relative;
+    z-index: 1;
 }
 
 .todo-wrapper:hover{
@@ -61,7 +93,7 @@
 .incoming-todo-item .delete-edit{
     width:15%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .incoming-todo-item .delete-edit i:hover{
