@@ -40,3 +40,9 @@
 .makeInvisible{
   display: none;
 }
+
+.headerName{
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}

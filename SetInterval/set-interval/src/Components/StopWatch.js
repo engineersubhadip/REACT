@@ -1,4 +1,5 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react';
+import './../App.css'
 
 let StopWatch = function(){
     let [counter,setCounter] = useState(0);
@@ -22,7 +23,7 @@ let StopWatch = function(){
 
     return(
         <div>
-            <div>StopWatch</div>
+            <div className='headerName'>StopWatch</div>
             <div>
             <div>{counter}</div>
             </div>
