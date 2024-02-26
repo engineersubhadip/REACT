@@ -8,8 +8,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Counter label="A" theme="red-theme"/>
-    <Counter label="B" theme="blue-theme"/>
-    <Counter label="C" theme="green-theme"/>
+    {/* <Counter label="B" theme="blue-theme"/>
+    <Counter label="C" theme="green-theme"/> */}
   </React.StrictMode>
 );
 

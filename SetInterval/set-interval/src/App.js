@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import StopWatch from "./Components/StopWatch";
+import {useState} from 'react'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	let [isVisible,checkVisibility] = useState(true);
+
+    let setVisibility = function(){
+        checkVisibility(!isVisible);
+    }
+
+	return (
+		<div className="App">
+			<input type='checkbox' onChange={setVisibility} /> Toggle Visibility
+			{/* {isVisible ? <StopWatch /> : null}   This is used to remove element from the DOM*/}
+			{/* {isVisible ? <StopWatch/> : <div className="makeInvisible"><StopWatch/></div>} */}
+			<div className={isVisible ? null : "makeInvisible"}>
+				<StopWatch/>
+			</div>
+		</div>
+	);
 }
 
 export default App;

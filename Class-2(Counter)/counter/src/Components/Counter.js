@@ -7,7 +7,37 @@ let Counter = function(props){
     let [count,setCount] = useState(0);
 
     function increaseCounter(event){
-        setCount(count+1);
+        console.log("Getting Clicked");
+        setTimeout(function(){
+            console.log("Only Once");
+            setCount(count+1);
+        },5000);
+        // setCount(count+1);
+        // setCount(count+1);
+        // setCount(count+1);
+        // setCount(count+1);
+
+        // console.log(count);
+
+        // setCount(function f1(prev){
+        //     return prev+1
+        // });
+
+        // setCount(function f1(prev){
+        //     return prev+1
+        // });
+
+        // setCount(function f1(prev){
+        //     return prev+1
+        // });
+
+        // setCount(function f1(prev){
+        //     return prev+1
+        // });
+
+        // setCount(function f1(prev){
+        //     return prev+1
+        // });
     }
 
     function decreaseCounter(event){
