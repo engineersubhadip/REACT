@@ -1,6 +1,8 @@
 let Header = function(){
     return(
-        <h1>This is the Header Component</h1>
+        <div>
+            This is a Header
+        </div>
     )
 }
 
