@@ -1,7 +1,6 @@
 let UserProfile = function(props){
-    console.log(props);
     return(
-        <div>I am {props.name}, of age {props.age} living in {props.place}</div>
+        <h3>I am {props.name}, of age {props.age} living in {props.place}</h3>
     )
 }
 
