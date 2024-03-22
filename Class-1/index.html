@@ -15,11 +15,15 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
     <script>
-        let h1 = React.createElement("h1",{},"Hello World from ReactJS");
+        let h1 = React.createElement("h1",{className:"greeting", id:"one"},"Hello World from ReactJS");
+
+		let h2 = React.createElement("h2",{className:"question", id:"two"},"How are you ?");
+
+		let div = React.createElement("div",{className:"parent"}, [h1,h2]);
         
         let root = ReactDOM.createRoot(document.querySelector("#root"));
 
-        root.render(h1);
+        root.render(div);
     </script>
 
   </body>
