@@ -14,6 +14,7 @@ let Products = function(){
         }
         </div>
         // <div>{product[1].name}</div>
+
     );
 };
 
