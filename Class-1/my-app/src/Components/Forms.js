@@ -35,16 +35,23 @@ let Forms = function(){
         }
     }
 
+    let handleSubmit = function(e){
+        e.preventDefault();
+        console.log(firstName,lastName);
+    }
     return (
         <div>
             <h3>This is a Form Component</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="fName">Please enter first name </label>
                 <input type="text" id="fName" value={firstName} onChange={updateFirstName}></input>
                 <br></br>
                 <br></br>
-                <label htmlFor="lName">Please enter last name</label>
+                <label htmlFor="lName">Please enter last name </label>
                 <input type="text" id="lName" value={lastName} onChange={updateLastName}></input>
+                <br></br>
+                <br></br>
+                <button type="submit">Submit Details</button>
             </form>
         </div>
     )
