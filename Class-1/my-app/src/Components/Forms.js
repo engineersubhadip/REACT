@@ -9,7 +9,13 @@ let Forms = function(){
         //     console.log("Getting triggered")
         //     setFirstName(e.target.value);
         // }
+        if (e.target.value.length > 5){
+            console.log(firstName);
+            console.log("Not valid");
+            return;
+        }
         setFirstName(e.target.value);
+        console.log(firstName);
         // console.log(e.target.value);
         // setFirstName(e.target.value);
     }
