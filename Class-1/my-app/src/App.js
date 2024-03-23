@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import UserProfile from './Components/UserProfile';
 import Counter from './Components/Counter';
+import Products from './Components/Products';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 		<Header/>
 		<Footer />
 		<Counter />
+		<Products />
 	</>
   );
 }
