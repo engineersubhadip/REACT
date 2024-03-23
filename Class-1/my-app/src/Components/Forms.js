@@ -17,12 +17,10 @@ let Forms = function(){
         */
 
         if (e.target.value.length > 5){
-            console.log(firstName);
-            console.log("Not valid");
+            alert("First Name cannot be more than 5 characters");
             return;
         }
-        // setFirstName(e.target.value);
-        // console.log(firstName);
+        setFirstName(e.target.value);
     }
 
     return (
