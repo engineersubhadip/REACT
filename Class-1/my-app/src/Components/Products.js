@@ -9,7 +9,7 @@ let Products = function(){
         <div>
         {
             product.map(function(ele){
-                return <div key={ele.id}>{ele.name}</div>
+                return <div key={ele.id}>Name is : {ele.name} and price is : {ele.price}</div>
             })
         }
         </div>
