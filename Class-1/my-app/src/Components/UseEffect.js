@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 let UseEffect = function(){
+    console.log("Getting updated");
     let [count,setCount] = useState(0);
     let [text,setText] = useState("");
 
