@@ -8,10 +8,10 @@ function App() {
   return (
     <>
 		<Navbar/>
-		{/* <Banner />
-		<Movie />
-		<Pagination />
-		<h3>Welcome to the TMDB Website</h3> */}
+		<Banner />
+		{/* <Movie /> */}
+		{/* <Pagination /> */}
+		{/* <h3>Welcome to the TMDB Website</h3> */}
 	</>
   );
 }

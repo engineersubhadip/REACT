@@ -1,6 +1,9 @@
 function Banner(){
     return (
-        <div>This is a Banner Component</div>
+        <div className="h-[100vh] md:h[50vh] bg-cover flex items-end justify-center"
+        style={{backgroundImage:`url(https://images5.alphacoders.com/134/1342570.jpeg)`}}>
+            <div className="text-2xl text-white w-full p-4 text-center font-bold">Migration</div>
+        </div>
     )
 }
 
