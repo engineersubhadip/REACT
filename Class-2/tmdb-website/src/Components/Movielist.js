@@ -9,7 +9,7 @@ function Movielist(){
     useEffect(function(){
         axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=684a5e1c0a061b97c5014def1d3f05d6')
         .then(function(res){
-            // console.log(res.data.results);
+            
             setMovies(res.data.results);
         })
     },[]);
@@ -21,8 +21,10 @@ function Movielist(){
             <div className="flex flex-wrap justify-around">
             
                 {
-                    movies.map(function(ele){
-                        return <Movie title={ele.title}/>
+                    movies.map(function(ele,index){
+                        console.log(ele.id);
+                        let imageURL = `https://image.tmdb.org/t/p/original/${ele.backdrop_path}`;
+                        return <Movie key={index} id={ele.id} title={ele.title} poster_path={imageURL}/>
                     })
                 }
 
