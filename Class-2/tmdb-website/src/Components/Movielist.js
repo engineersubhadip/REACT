@@ -22,7 +22,7 @@ function Movielist(){
             
                 {
                     movies.map(function(ele,index){
-                        console.log(ele.id);
+                        
                         let imageURL = `https://image.tmdb.org/t/p/original/${ele.backdrop_path}`;
                         return <Movie key={index} id={ele.id} title={ele.title} poster_path={imageURL}/>
                     })

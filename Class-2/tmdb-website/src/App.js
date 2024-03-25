@@ -6,6 +6,7 @@ import Pagination from './Components/Pagination';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Watchlist from './Components/Watchlist';
 import Movielist from './Components/Movielist';
+import MovieDetail from './Components/Moviedetail';
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
 			{/* This is the Watchlist Route */}
 			<Route path="/watchlist" element={
 					<Watchlist />
+			}>
+
+			</Route>
+
+			{/* This is for Movie Detail Page */}
+
+			<Route path="/movieDetail/:id" element={
+				<MovieDetail />
 			}>
 
 			</Route>
