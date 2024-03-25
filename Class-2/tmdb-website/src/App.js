@@ -21,12 +21,10 @@ function App() {
 				</>
 			}>
 			</Route>
-			
+
 			{/* This is the Watchlist Route */}
 			<Route path="/watchlist" element={
-				<>
 					<Watchlist />
-				</>
 			}>
 
 			</Route>
