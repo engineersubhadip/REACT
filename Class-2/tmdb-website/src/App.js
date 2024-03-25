@@ -5,6 +5,7 @@ import Movie from './Components/Movie';
 import Pagination from './Components/Pagination';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Watchlist from './Components/Watchlist';
+import Movielist from './Components/Movielist';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
 			<Route path="/" element={
 				<>
 					<Banner/>
-					<Movie />
+					<Movielist/>
 				</>
 			}>
 			</Route>
