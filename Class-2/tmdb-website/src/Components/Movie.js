@@ -4,7 +4,7 @@ function Movie(){
 
             <h3 className="text-3xl font-bold text-center p-[3rem] text-cyan-800">Trending Movies</h3>
 
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-around">
 
                 <div className="h-[50vh] w-[200px] bg-center bg-cover rounded-md m-6 hover:scale-105 duration-300 cursor-pointer flex items-end"
                 style={{backgroundImage:`url(https://m.media-amazon.com/images/M/MV5BYjQxMWY5NjgtNDI2NS00MWM2LTg2MDAtNjI5NGIwZTNmYWZiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg)`}}>
