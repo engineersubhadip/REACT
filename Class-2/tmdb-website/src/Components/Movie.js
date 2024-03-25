@@ -13,7 +13,7 @@ function Movie(){
                     </div>
                 </div>
                 {/* Below is Copy Paste Code */}
-                <div className="h-[50vh] w-[200px] bg-center bg-cover rounded-md m-6 hover:scale-105 duration-300 cursor-pointer flex items-end"
+                {/* <div className="h-[50vh] w-[200px] bg-center bg-cover rounded-md m-6 hover:scale-105 duration-300 cursor-pointer flex items-end"
                 style={{backgroundImage:`url(https://lh3.googleusercontent.com/proxy/C5anyJxnzTJcvFLYVCrp5znhbV1NSoixSnGSDDcA2ijNxCFq0rYRxgvI1VmAhOrqI73CM_-qyux3xqCpdO4D4MvmzC53lXpmStd5o4PHF-K2FJEHOdZ3nyBg9SegWs3F-x5TqQ)`}}>
                     <div className="w-full text-center bg-neutral-900 text-white p-2 text-xl">
                         Migration
@@ -89,7 +89,7 @@ function Movie(){
                                         <div className="w-full text-center bg-neutral-900 text-white p-2 text-xl">
                         Migration
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
