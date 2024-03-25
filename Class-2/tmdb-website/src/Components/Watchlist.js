@@ -1,6 +1,8 @@
 function Watchlist(){
     return (
-        <div>This is a Watchlist Component</div>
+        <>
+        <div className="font-bold text-3xl cursor-pointer text-cyan-800">Watchlist</div>
+        </>
     )
 }
 
