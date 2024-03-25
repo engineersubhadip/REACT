@@ -3,13 +3,17 @@ import Navbar from './Components/Navbar';
 import Banner from './Components/Banner';
 import Movie from './Components/Movie';
 import Pagination from './Components/Pagination';
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
     <>
-		<Navbar/>
+		<BrowserRouter>
+		<Navbar />
+  		</BrowserRouter>
+		{/* <Navbar/>
 		<Banner />
-		<Movie />
+		<Movie /> */}
 		{/* <Pagination /> */}
 		{/* <h3>Welcome to the TMDB Website</h3> */}
 	</>
