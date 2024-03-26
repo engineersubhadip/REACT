@@ -1,15 +1,33 @@
-import {useState} from 'react';
+// import {useState} from 'react';
 
-function Todolist(props){
-    console.log(props);
-    let [todoList,setTodoList] = useState([]);
+// function Todolist({props}){ // props is an array of todos
+//     console.log(props)
+//     return (
+//         <div>
+//             {
+//                 props.items.map(function(data){
+//                     return <div>{data}</div>
+//                 })
+//             }
+//         </div>
+//     )
+// }
 
-    return (
-        <div>
-            {/* <div>I am a todo item 1</div>
-            <div>I am a todo item 2</div> */}
+// export default Todolist;
 
-        </div>
+
+function Todolist(prop){
+    console.log(prop);
+    let todoData = prop.todolist;
+    console.log(todoData);
+    return(
+        <>
+            {
+                todoData.map(function(data,idx){
+                    return <div key={idx}>{data}</div>
+                })
+            }
+        </>
     )
 }
 
