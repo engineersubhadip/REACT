@@ -1,0 +1,28 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+.header-wrapper{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap:2rem;
+    margin-bottom: 5rem;
+    /* border: 2px solid red; */
+}
+
+.input-box{
+    height:2rem; 
+    width:25rem
+}
+
+.todo-wrapper{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
