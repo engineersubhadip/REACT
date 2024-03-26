@@ -1,12 +1,14 @@
 import './App.css';
-import Header from './Components/Header';
-import Todolist from './Components/Todolist';
+import Header from './Components/TodoItem';
+import TodoList from './Components/TodoList';
 
 
 function App() {
   return (
     <>
-	<Header/>
+    {/* Welcome */}
+    <TodoList />
+	{/* <Header/> */}
 	{/* <Todolist/> */}
 	</>
   );

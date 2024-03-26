@@ -1,47 +1,20 @@
-// import {useState} from 'react';
+import TodoItem from "./TodoItem";
+import './../TodoList.css';
 
-import { useState } from "react";
+function TodoList(){
 
-// function Todolist({props}){ // props is an array of todos
-//     console.log(props)
-//     return (
-//         <div>
-//             {
-//                 props.items.map(function(data){
-//                     return <div>{data}</div>
-//                 })
-//             }
-//         </div>
-//     )
-// }
-
-// export default Todolist;
-
-
-function Todolist(prop){
-    
-    function handleClick(data){
-        alert(`${data} is clicked`);
-    }
-
-    let todoData = prop.todolist;
-
-    let [isFinished,setIsFinished] = useState(false);
+    let todoListArr = [{id:237,todoData:"Todo Item1"},{id:256,todoData:"Todo Item2"},{id:272,todoData:"Todo Item3"}];
 
     return(
-        <>
+        <div className="list-todo">
             {
-                todoData.map(function(data,idx){
-                    return (
-                        <div>
-                            <div key={idx} onClick={() => handleClick(data)}>{data}</div>
-                            <button onClick={() => setIsFinished(!isFinished)}>{(isFinished) ? `Redo` : `Done`}</button>
-                        </div>
-                    )
+                todoListArr.map(function(res){
+                    return <TodoItem key={res.id} todoDetail={res.todoData} todoID={res.id}/>
                 })
             }
-        </>
+            
+        </div>
     )
 }
 
-export default Todolist;
+export default TodoList;
