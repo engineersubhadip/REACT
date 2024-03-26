@@ -17,14 +17,17 @@
 
 
 function Todolist(prop){
-    console.log(prop);
+    
+    function handleClick(data){
+        alert(`${data} is clicked`);
+    }
+    
     let todoData = prop.todolist;
-    console.log(todoData);
     return(
         <>
             {
                 todoData.map(function(data,idx){
-                    return <div key={idx}>{data}</div>
+                    return <div key={idx} onClick={() => handleClick(data)}>{data}</div>
                 })
             }
         </>
