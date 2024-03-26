@@ -20,6 +20,7 @@ function App() {
 				<>
 					<Banner/>
 					<Movielist/>
+					<Pagination />
 				</>
 			}>
 			</Route>
@@ -44,7 +45,7 @@ function App() {
 		{/* <Navbar/>
 		<Banner />
 		<Movie /> */}
-		{/* <Pagination /> */}
+		
 		{/* <h3>Welcome to the TMDB Website</h3> */}
 	</>
   );
