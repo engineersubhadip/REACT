@@ -1,5 +1,7 @@
 // import {useState} from 'react';
 
+import { useState } from "react";
+
 // function Todolist({props}){ // props is an array of todos
 //     console.log(props)
 //     return (
@@ -21,13 +23,21 @@ function Todolist(prop){
     function handleClick(data){
         alert(`${data} is clicked`);
     }
-    
+
     let todoData = prop.todolist;
+
+    let [isFinished,setIsFinished] = useState(false);
+
     return(
         <>
             {
                 todoData.map(function(data,idx){
-                    return <div key={idx} onClick={() => handleClick(data)}>{data}</div>
+                    return (
+                        <div>
+                            <div key={idx} onClick={() => handleClick(data)}>{data}</div>
+                            <button onClick={() => setIsFinished(!isFinished)}>{(isFinished) ? `Redo` : `Done`}</button>
+                        </div>
+                    )
                 })
             }
         </>
