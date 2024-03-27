@@ -3,19 +3,11 @@ import './../TodoItem.css'
 
 
 function TodoItem(prop){
-    // console.log(prop);
+    
 
     let [isEditing,setIsEditing] = useState(false);
 
     let [todoChange,setTodoChange] = useState(prop.todoDetail);
-
-    // let [isEdit,setIsEdit] = useState(true);
-
-    // function editTodo(e,todoID){
-    //     console.log(todoID);
-    //     console.log(e.target)
-        
-    // }
 
     return(
         <>
@@ -36,7 +28,6 @@ function TodoItem(prop){
                     if(prop.todoDetail !== todoChange){
                         prop.editData(todoChange);
                     }
-                    // prop.editData(todoChange);
                 }}>
 
                     {(isEditing) ? "Save" : "Edit"}
