@@ -15,7 +15,13 @@ function TodoList(){
     }
 
     function deleteTodo(id){
-        console.log(id)
+        console.log(id);
+        let remainingTodo = todoListArr.filter(function(ele){
+            if(ele.id !== id){
+                return true;
+            }
+        })
+        setTodoListArr(remainingTodo);
     }
 
     return(
