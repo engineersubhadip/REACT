@@ -24,6 +24,20 @@ function TodoList(){
         setTodoListArr(remainingTodo);
     }
 
+
+    function editChildTodo(data,id){
+        console.log(data);
+
+        let updatedTodo = todoListArr.map(function(res){
+            if (res.id === id){
+                res.todoData = data;
+            }
+            return res;
+        })
+
+        setTodoListArr(updatedTodo);
+    }
+
     return(
         <div className="list-todo">
             <div className="top-header">
@@ -32,7 +46,7 @@ function TodoList(){
             </div>
             {
                 todoListArr.map(function(res){
-                    return <TodoItem key={res.id} todoDetail={res.todoData} todoID={res.id} delete={() => deleteTodo(res.id)}/>
+                    return <TodoItem key={res.id} todoDetail={res.todoData} todoID={res.id} delete={() => deleteTodo(res.id)} editData={(data) => editChildTodo(data,res.id)}/>
                 })
             }
             

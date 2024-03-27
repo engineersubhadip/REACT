@@ -5,7 +5,9 @@ import './../TodoItem.css'
 function TodoItem(prop){
     // console.log(prop);
 
-    let [isFinished,setIsFinished] = useState(false);
+    let [isEditing,setIsEditing] = useState(false);
+
+    let [todoChange,setTodoChange] = useState(prop.todoDetail);
 
     // let [isEdit,setIsEdit] = useState(true);
 
@@ -19,13 +21,26 @@ function TodoItem(prop){
         <>
         
             <div className='todo-item-wrapper'>
-                <div className={(isFinished) ? 'todo-done' : 'todo-not-done'}>{prop.todoDetail}</div>
-                {/* <button onClick={(e) => editTodo(e,prop.todoID)}>{(isEdit) ? 'Edit' : 'Save'}</button> */}
+
+
+                {
+                    (!isEditing) ? <div>{prop.todoDetail}</div> : <input type="text" value={todoChange} onChange={(e) => setTodoChange(e.target.value)}></input>
+                }
+
+                <button onClick={() => {prop.delete()}}>
+                    Done
+                </button>
+
                 <button onClick={() => {
-                    setIsFinished(!isFinished);
-                    prop.delete();
-                    }}>
-                    {(isFinished) ? 'Redo' : 'Done'}
+                    setIsEditing(!isEditing)
+                    if(prop.todoDetail !== todoChange){
+                        prop.editData(todoChange);
+                    }
+                    // prop.editData(todoChange);
+                }}>
+
+                    {(isEditing) ? "Save" : "Edit"}
+
                 </button>
             </div>
 
