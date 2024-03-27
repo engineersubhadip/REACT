@@ -14,6 +14,10 @@ function TodoList(){
         setTodo("")
     }
 
+    function deleteTodo(id){
+        console.log(id)
+    }
+
     return(
         <div className="list-todo">
             <div className="top-header">
@@ -22,7 +26,7 @@ function TodoList(){
             </div>
             {
                 todoListArr.map(function(res){
-                    return <TodoItem key={res.id} todoDetail={res.todoData} todoID={res.id}/>
+                    return <TodoItem key={res.id} todoDetail={res.todoData} todoID={res.id} delete={() => deleteTodo(res.id)}/>
                 })
             }
             

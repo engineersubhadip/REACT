@@ -5,3 +5,13 @@
 .todo-not-done{
     text-decoration: none;
 }
+
+.todo-item-wrapper{
+    display: flex;
+    /* width:50vh; */
+    /* border:2px solid black; */
+    /* justify-content: space-evenly; */
+    /* gap:10rem; */
+    padding:1rem;
+    gap:4rem;
+}
