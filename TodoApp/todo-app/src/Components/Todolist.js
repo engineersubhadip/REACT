@@ -15,7 +15,7 @@ function TodoList(){
     }
 
     function deleteTodo(id){
-        console.log(id);
+        
         let remainingTodo = todoListArr.filter(function(ele){
             if(ele.id !== id){
                 return true;
@@ -26,7 +26,6 @@ function TodoList(){
 
 
     function editChildTodo(data,id){
-        console.log(data);
 
         let updatedTodo = todoListArr.map(function(res){
             if (res.id === id){
