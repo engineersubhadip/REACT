@@ -16,7 +16,8 @@ function TodoItem(prop){
 
 
                 {
-                    (!isEditing) ? <div>{prop.todoDetail}</div> : <input type="text" value={todoChange} onChange={(e) => setTodoChange(e.target.value)}></input>
+                    (!isEditing) ? <div>{prop.todoDetail}</div> : 
+                    <input type="text" value={todoChange} onChange={(e) => setTodoChange(e.target.value)}></input>
                 }
 
                 <button onClick={() => {prop.delete()}}>

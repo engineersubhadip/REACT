@@ -45,7 +45,15 @@ function TodoList(){
             </div>
             {
                 todoListArr.map(function(res){
-                    return <TodoItem key={res.id} todoDetail={res.todoData} todoID={res.id} delete={() => deleteTodo(res.id)} editData={(data) => editChildTodo(data,res.id)}/>
+
+                    return <TodoItem 
+                    
+                    key={res.id} 
+                    todoDetail={res.todoData} 
+                    todoID={res.id} 
+                    delete={() => deleteTodo(res.id)} 
+                    editData={(data) => editChildTodo(data,res.id)}/>
+
                 })
             }
             
